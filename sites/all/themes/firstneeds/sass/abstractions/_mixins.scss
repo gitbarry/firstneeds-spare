@@ -1,0 +1,260 @@
+@mixin gradient($top, $bottom){
+  background: $top; /* Old browsers */
+  background: -moz-linear-gradient(top,  $top 0%, $bottom 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$top), color-stop(100%,$bottom)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  $top 0%,$bottom 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  $top 0%,$bottom 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  $top 0%,$bottom 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  $top 0%,$bottom 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$top', endColorstr='#68a8c1',GradientType=0 ); /* IE6-9 */
+}
+
+@mixin gradient-background($top, $bottom) {
+  background: red; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient($top, $bottom); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient($top, $bottom); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient($top, $bottom); /* For Firefox 3.6 to 15 */
+  background: linear-gradient($top, $bottom); /* Standard syntax */
+}
+
+@mixin menu() {
+  ul.menu {
+    margin:0;
+    padding:0;
+    list-style-type: none;
+    list-style-image: none;
+
+    li.leaf {
+      display:inline-block;
+      margin: $nav__main-margin;
+      a {
+        display:block;
+        text-align:center;
+        padding:$nav__main__padding;
+        margin:$nav__main-margin;
+        border-left:1px solid #666;
+        color: $nav__main__color;
+        @include breakpoint($tablet){
+          font-size: $nav__main-text-size;
+        }
+
+        &:hover {
+          @include gradient($nav__main__bgcolor, #666);
+          //background:#000;
+        }
+      }
+    }
+    li.last.leaf a {
+      border-right:1px solid #666;
+    }
+  }
+}
+
+@mixin sideMenu() {
+  ul.menu {
+    margin:0;
+    padding:0;
+    list-style-type: none;
+    list-style-image: none;
+
+    li.leaf {
+      display:block;
+      margin: 0 0 1px 0;
+      a {
+        display:block;
+        padding:$nav__side__padding-mobile;
+        font-size: $nav__side-text-size-mobile;
+        background: $nav__side__bgcolor;
+        color: $nav__side__color;
+        border-top:1px solid $black;
+        border-bottom:1px solid $dark-grey;
+        margin:0;
+        @include breakpoint($tablet) {
+          padding:$nav__side__padding;
+        }
+        &:hover {
+          background: $nav__side__bgcolor-hover;
+        }
+      }
+    }
+  }
+}
+
+@mixin footer-menu() {
+  ul.menu {
+    margin:1em 0 0 0;
+    padding:0;
+    list-style-type: none;
+    list-style-image: none;
+
+    li.leaf {
+      display:block;
+      margin: 0 0 1px 0;
+      a {
+        display:block;
+        padding:0;
+        background: $nav__footer__bgcolor;
+        color: $nav__footer__color;
+        border-bottom:1px solid $dark-grey;
+        margin:0;
+        text-align: center;
+        @include breakpoint($tablet) {
+          text-align: left;
+        }
+        &:hover {
+          background: $nav__side__bgcolor-hover;
+        }
+      }
+    }
+  }
+}
+
+@mixin border-radius($value) {
+  -webkit-border-radius: $value;
+  -moz-border-radius: $value;
+  border-radius: $value;
+}
+
+@mixin homebox() {
+  .homebox {
+    @include box-style();
+    @include border-radius("5px");
+    margin-bottom: $block__bottom-margin;
+    padding: 0 0 1em;
+
+    h2 {
+      @include box-header($block__heading-padding);
+    }
+
+    .field__date,
+    .field__body,
+    .field__node-link {
+      padding: 0 1em;
+    }
+  }
+}
+
+
+@mixin button() {
+  display:inline-block;
+  color: $button__text-color;
+  background: $button__background-color;
+  padding: .5em 1em;
+  text-align: center;
+  border:none;
+  @include border-radius(6px);
+}
+
+@mixin box-style() {
+  @include border-radius($block__border-radius);
+  border: 1px solid $block__border-color;
+  @include gradient(#222, #666);
+}
+
+@mixin box-header($padding) {
+  -webkit-border-top-left-radius: $block__border-radius;
+  -webkit-border-top-right-radius: $block__border-radius;
+  -moz-border-radius-topleft: $block__border-radius;
+  -moz-border-radius-topright: $block__border-radius;
+  border-top-left-radius: $block__border-radius;
+  border-top-right-radius: $block__border-radius;
+  background: $block__heading-bgcolor;
+  color: $block__heading-text-color;
+  margin: $block__heading-margin;
+  padding: $padding;
+  font-weight: $block__heading-font-weight;
+}
+
+
+
+@mixin theme-gradient() {
+  @include gradient($theme__gradient-top,$theme__gradient-bottom);
+}
+
+@mixin my-text-shadow($color, $blur, $offset){
+  $default-text-shadow-color: rgba($color, 1);
+  $default-text-shadow-blur: $blur;
+  $default-text-shadow-v-offset: $offset;
+  @include single-text-shadow;
+}
+
+@mixin block() {
+  border:1px solid $block__border-color;
+  background-color: $block__bgcolor;
+  margin: $block__margin;
+  padding: 0;
+  //@include border-radius(5px);
+  h2.block__title,
+  h2.block__title a,
+  h2.block__title a,
+  .field__title h2 {
+    @include block-header();
+  }
+  .block__content {
+    padding: $block__padding;
+    color: $block__text-color;
+  }
+  .block__image {
+    padding:0;
+    margin: 0;
+    display: block;
+    a {
+      display: block;
+      background: red;
+      img {
+        width:100%;
+      }
+    }
+  }
+  .field__body {
+    padding: $h-space/2 $v-space;
+    p {
+      font-size: 0.85em;
+      line-height: 140%;
+      margin: 0.5em 0 0;
+      text-align: justify;
+    }
+  }
+  .field__node-link {
+    a {
+      background: #900;
+      color:#fff;
+      padding:.5em 0;
+      margin-top:.5em;
+      display: block;
+      text-align: center;
+      &:hover {
+        background: #000;
+      }
+    }
+
+  }
+}
+
+@mixin block-header() {
+  margin:0;
+  padding:$block__heading-padding;
+  background: $block__heading-bgcolor;
+  color: $block__heading-text-color;
+  font-size: $block__heading-size;
+  @include gradient($nav__main__bgcolor, #29363F);
+  @include head-font();
+  a {
+    display:block;
+  }
+  .field__title .block__title a {
+    padding:0;
+    margin:0;
+    display: inline;
+    font-size: $block__heading-size;
+  }
+}
+
+@mixin head-font(){
+  font-family: "Nobile", arial, helvetica, sans-serif;
+}
+
+@mixin box-shadow($color) {
+  -webkit-box-shadow: 0 2px 20px 4px $color;
+  box-shadow: 0 2px 20px 4px $color;
+}

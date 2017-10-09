@@ -1,0 +1,12 @@
+name = Spider FC
+description = "Spider FC module allows to create calendars, which can be added as content."
+core = 7.x
+package = Spider FC
+configure = admin/settings/spider_fc
+
+; Information added by drupal.org packaging script on 2013-04-03
+version = "7.x-1.8"
+core = "7.x"
+project = "flash-calendar"
+datestamp = "1364991312"
+

@@ -1,0 +1,111 @@
+/* Miscellaneous */
+$space: em(16);
+
+/* COLORS */
+$black: #000;
+$grey-dark: #333;
+$dark-grey: #333;
+$grey: #666;
+$light-grey: #999;
+$lighter-grey: #ccc;
+$white: #FFFFFF;
+$red: #FF0000;
+$green: #62bd18;
+$theme__color: #012561;
+$theme__color-two: #F69222;
+
+/* BODY STYLES */
+$body__font: 'Hind', sans-serif;
+$body__font-size: em(15);
+$body__font-color: $dark-grey;
+$body__line-height: 150%;
+$body__margin: 0;
+$body__margin: 0;
+$body__link-color: $body__font-color;
+$body__link-color-hover: $theme__color;
+
+/* BlOCK COLOURS */
+
+$form__background-color: #efefef;
+$gradient-top: $theme__color-two;
+$gradient-bottom: #555;
+$border__color: $light-grey;
+$body__background-color: $white;
+$header__background-color: white;
+$content__background-color: white;
+$icon__background-color: $theme__color;
+$block__job-results_header-background-color: $dark-grey;
+$block__job-results_header-color: $white;
+
+$top-bar__background-color: $theme__color;
+$page__top-bar_item__link_color: $theme__color-two;
+$page__top-bar_item__link_color_hover: $white;
+
+$text-block-highlighted__color: $white;
+$text-block-highlighted__header-color: $theme__color;
+
+$block__data-rows_header-background-color: $dark-grey;
+$block__data-rows_header-color: $white;
+
+$cards__header-background-color: $grey-dark;
+$cards__border-color: #999;
+$cards__header--color: white;
+$cards__header--margin: 0;
+$cards__header--padding: .5em;
+$cards__header--font-size: em(16);
+$card__copy-font-size: em(15);
+$card__copy-padding: 0 em(8) em(8);
+
+$button__color: $theme__color;
+
+$fieldset__border-color: $border__color;
+
+
+$main-nav__background-color: $theme__color-two;
+$main-nav__color: $white;
+$main-nav__background-color_hover: $theme__color;
+$main-nav__color_hover: $white;
+$main-nav__font-size: 1.1em;
+$main-nav__padding: .5em 1em;
+
+$footer__color: $grey;
+$footer__background-color: $dark-grey;
+$footer-nav__color: $footer__color;
+$footer-nav__color-hover: white;
+
+$card-nav__color: $body__link-color;
+$card-nav__color-hover: $body__link-color-hover;
+
+$block__margin: 0 0 $space*2 0;
+$block__horizontal-padding: 0 $space;
+
+$even-row: #ccc;
+
+$side-block__font_color: $white;
+$side-block__padding: $space;
+$side-block__margin: $block__margin;
+$side-block__heading_color: $theme__color;
+
+/* Font Properties */
+$font__size-large: 1.5em;
+$heading__h2-font-size: em(35);
+$heading__h2-font-size-mobile: em(28);
+$heading__h2-font-size-tablet: em(30);
+$heading__font-color: $body__font-color;
+$heading__h4-font-size: em(24);
+
+$page-title__font-size: em(24);
+$page-title__font-size-mobile: em(22);
+$page-title__font-size-tablet: em(24);
+
+$themed-link__color: #777620;
+
+$button__text-color: $white;
+$button__background-color: $theme__color;
+
+// Form Elements
+$input-submit__background-color: $theme__color-two;
+$input-submit__color: $white;
+$input-submit__border: none;
+$input-submit__padding: .5em 1em;
+$input-submit__font-size: .9em;

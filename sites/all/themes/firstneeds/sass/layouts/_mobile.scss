@@ -1,0 +1,27 @@
+.not-mobile__inline {
+  display: none;
+  @include breakpoint($tablet) {
+    display: inline-block;
+  }
+}
+
+.mobile-only__inline {
+  display: inline-block;
+  @include breakpoint($tablet) {
+    display: none;
+  }
+}
+
+.not-mobile__block{
+  display: none;
+  @include breakpoint($tablet) {
+    display: block;
+  }
+}
+
+.mobile-only__block {
+  display: block;
+  @include breakpoint($tablet) {
+    display: none;
+  }
+}

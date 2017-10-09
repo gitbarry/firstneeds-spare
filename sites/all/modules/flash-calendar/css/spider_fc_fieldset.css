@@ -1,0 +1,61 @@
+.fieldset {
+  border: none;
+  display: block;
+}
+
+.spider_fc_event_filedset {
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  width: 600px;
+}
+
+.event_date_button {
+  margin-left: 5px;
+}
+
+.form-item-event-date-start,
+.form-item-event-date-end {
+  display: inline;
+}
+
+.spider_fc_calendar_fieldset {
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  padding: 0px;
+}
+
+#edit-fieldset-cal-buttons,
+#edit-fieldset-search-cal-title,
+#edit-fieldset-search-event-date ,
+#edit-fieldset-event-buttons {
+  padding: 0;
+}
+
+.fieldset_inline {
+  border: none;
+  display: inline;
+}
+
+.form-item-search-cal-title,
+.form-item-search-event-title {
+  border: none;
+  display: inline;
+}
+
+#edit-search-cal-button {
+  margin-left:10px;
+  position:relative;
+}
+
+.form-item-text,
+.form-item-html,
+.form-item-content {
+  display: inline;
+}
+
+.form-item-event-time-begin-minute,
+.form-item-event-time-begin-second,
+.form-item-event-time-end-minute,
+.form-item-event-time-end-second {
+  display:inline;
+}

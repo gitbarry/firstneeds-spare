@@ -1,0 +1,74 @@
+// Top Bar Dimensions
+.page__top-bar {
+  background: $top-bar__background-color;
+  color: #fff;
+  font-size: .9em;
+
+  // Icons
+  .fa {
+    position: relative;
+    top: 2px;
+    margin-right: $space/4;
+    font-size: em(28);
+    @include breakpoint($ipad) {
+      font-size: em(22);
+    }
+  }
+
+  // Text
+  span {
+    display:none;
+    @include breakpoint($ipad) {
+      display: inline-block;
+    }
+  }
+
+  .page__top-bar_inner {
+    @include container();
+    padding: $space/2 $space;
+  }
+
+
+  .page__top-bar_left {
+    @include susy-clearfix();
+    display: block;
+    @include breakpoint($ipad) {
+      @include span(6 of 12 first);
+    }
+
+
+    .page__top-bar_item {
+      @include gallery(6);
+      text-align: left;
+
+        p {
+          font-size: em(14);
+          padding: 0;
+          margin: 0;
+          color: $page__top-bar_item__link_color;
+            @include breakpoint($ipad) {
+              font-size: em(16);
+            }
+        }
+    }
+    .page__top-bar_item:last-child {
+      text-align: right;
+    }
+  }
+
+  .page__top-bar_right {
+    display: block;
+    clear: both;
+    @include breakpoint($ipad) {
+      @include span(5 of 12 last);
+    }
+  }
+
+}
+
+// Top Bar Styles
+
+.page__top-bar_item {
+  padding: 0 .25em;
+  text-align: center;
+}

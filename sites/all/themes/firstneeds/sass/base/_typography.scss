@@ -1,0 +1,22 @@
+a,
+a:hover {
+  text-decoration: none;
+}
+
+h2 {
+  color: $heading__font-color;
+}
+
+h3 {
+  color: $heading__font-color;
+}
+
+h1, h2, h3, h4, h5 {
+  line-height: 120%;
+  font-weight: normal;
+}
+
+cite {
+  display: block;
+  margin-bottom: em(16);
+}

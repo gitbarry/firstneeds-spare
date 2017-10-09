@@ -1,0 +1,63 @@
+.cards__wrapper {
+  @include clearfix();
+  clear: both;
+  margin-top: em(32);
+}
+.card {
+  margin-bottom: em(16);
+  border: 1px solid $cards__border-color;
+  @include border-bottom-radius(10px);
+  h3 {
+    margin: $cards__header--margin;
+    @include linear-gradient(to top, $gradient-bottom, $gradient-top);
+    a {
+      color: $cards__header--color;
+      margin: $cards__header--margin;
+      padding: $cards__header--padding;
+      font-size: $cards__header--font-size;
+      text-shadow: 1px 1px black;
+      display: block;
+        &:hover {
+          color: $cards__header--color;
+        }
+    }
+  }
+  .card__copy {
+    font-size: $card__copy-font-size;
+    padding: $card__copy-padding;
+      p {
+        margin: 0;
+      }
+    @include breakpoint($tablet) {
+      min-height: 6em;
+    }
+  }
+
+  .card__image {
+    text-align: center;
+    padding: 1em;
+      i {
+        color: $icon__background-color;
+      }
+    a {
+      display: block;
+    }
+  }
+  &:hover {
+    @include animation(bounceCards 0.5s);
+  }
+}
+
+@include keyframes(bounceCards) {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    //transform: scale(1.1);
+    opacity: 0.6;
+  }
+  100% {
+    //transform: scale(1.1);
+    opacity: 1;
+  }
+}

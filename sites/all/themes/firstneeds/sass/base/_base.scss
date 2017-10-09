@@ -1,0 +1,27 @@
+body {
+  font-family: $body__font;
+  font-family: "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
+  background: $body__background-color;
+  font-size: $body__font-size;
+  line-height: $body__line-height;
+  margin: $body__margin;
+}
+
+a {
+  color: $body__link-color;
+    &:hover {
+      color: $body__link-color-hover;
+    }
+}
+a.button {
+  &:hover {
+    color: $white;
+  }
+}
+
+ul, ol {
+  margin-left: 0;
+    li {
+      margin-left: 0;
+    }
+}

@@ -1,0 +1,36 @@
+.block-search {
+  @include susy-clearfix();
+  text-align: center;
+  max-width: 260px;
+  margin: 0 auto $space/2;
+
+  .content {
+    background: none;
+
+    .search-block {
+      margin: 0;
+    }
+
+
+    // Text Field Wrapper
+    .form-type-textfield {
+      @include span(9 first);
+
+        input[type="text"] {
+          width: 100%;
+          border: none;
+          font-size: .9em;
+        }
+    }
+
+    // Submit Wrapper
+    .form-actions {
+      @include span(3 last);
+
+        input[type="submit"] {
+          @extend .input__submit-button;
+        }
+    }
+  }
+
+}

@@ -1,0 +1,14 @@
+.testimonial-row {
+  h4 {
+    color: $theme__color;
+    margin:0;
+    font-size: rem(16);
+  }
+
+  p {
+    font-style: italic;
+    @include breakpoint($tablet) {
+      font-size: rem(14);
+    }
+  }
+}

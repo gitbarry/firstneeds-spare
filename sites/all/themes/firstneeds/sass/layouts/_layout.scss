@@ -1,0 +1,24 @@
+.page-content__wrapper {
+  @include breakpoint($desktop) {
+    @include container();
+  }
+}
+
+.page-content {
+  display: block;
+  @include susy-breakpoint($ipad, $susy-no-padding)  {
+    @include span(9 of 12 first);
+  }
+}
+
+.page-aside {
+  display: block;
+  @include susy-breakpoint($ipad, $susy-no-padding) {
+    @include span(3 of 12 last);
+  }
+}
+
+.page-content_inner {
+  @include susy-clearfix();
+  margin: 0 .5em;
+}

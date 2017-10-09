@@ -1,0 +1,150 @@
+input,
+select,
+textarea {
+  padding: .5em;
+  border-radius: 5px;
+  background: white;
+  border: 1px solid #999;
+  font-size: rem(16);
+}
+textarea {
+  padding: em(8);
+  font-family: $body__font;
+}
+
+.pill {
+  @include button();
+}
+
+input[type="radio"] {
+  margin-right: .5em;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 95%;
+  @include breakpoint($tablet-landscape) {
+    width: auto;
+    min-width: 60%;
+  }
+}
+
+textarea {
+  width: 90%;
+  @include breakpoint($tablet-landscape) {
+    width: auto;
+    min-width: 60%;
+  }
+}
+
+.form-row {
+  @include clearfix;
+  margin: 0 0 1em;
+  label {
+    display: block;
+    margin-top: em(12);
+    @include breakpoint($tablet-landscape) {
+      @include span(4 first);
+      display: inline-block;
+    }
+  }
+}
+
+.form-row.radios {
+  label {
+      display: inline-block;
+      @include breakpoint($tablet-landscape) {
+        @include span(6 of 12 first);
+      }
+    }
+}
+
+fieldset {
+  border: 1px solid $fieldset__border-color;
+  margin-bottom: em(8);
+}
+
+.radio-wrapper {
+  padding-top: em(8);
+}
+
+.mandatory {
+  color: red;
+  display: inline-block;
+  margin: 0 em(8);
+}
+
+input.fieldError {
+  border-color: red;
+}
+
+.dropdown {
+  margin: 0 0 $space;
+}
+
+/* Contact Form Overides */
+.contact-form {
+  fieldset {
+    border: none;
+  }
+  label {
+    margin-top: em(12);
+    @include breakpoint($tablet-landscape) {
+      @include span(3 first);
+    }
+  }
+}
+
+
+/* Errors */
+.form__error-message {
+  color: red;
+}
+
+.form-block__forgot-password {
+  @include breakpoint($tablet-landscape) {
+    max-width: 50%;
+  }
+}
+
+/* Qualifications Form */
+  .form-row.radio {
+    input[type="checkox"] {
+      @include span(2 first);
+    }
+    label {
+      @include span(10 last);
+      margin-top: 0;
+    }
+}
+
+.dropdown {
+  .ui-selectmenu-button.ui-button {
+    width: 12em;
+    @include breakpoint($mobile) {
+      width: 13em;
+    }
+  }
+}
+
+// Add Booking Multiple Date Fields
+.booking-date__multi {
+  display: none;
+}
+
+.radio-rows {
+  padding-top: em(12);
+}
+
+.form-block {
+  background: $form__background-color;
+  padding: 1em;
+    fieldset {
+      border: none;
+      border-bottom: 1px solid $fieldset__border-color;
+        &:last-child {
+          border-bottom: none;
+        }
+    }
+}

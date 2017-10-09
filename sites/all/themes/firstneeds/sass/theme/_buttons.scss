@@ -1,0 +1,35 @@
+.button {
+  @include button();
+  cursor: pointer;
+  color: white;
+  }
+
+.button-small {
+  @extend .button;
+  padding: 8px 18px;
+  font-weight: normal;
+  text-shadow: 0 0 0 $button__color;
+}
+
+// Side Blocks
+.side-block {
+  .button {
+    @include button();
+  }
+}
+
+header.header .button {
+  color: white;
+  text-shadow: none;
+  box-shadow: none;
+  margin: em(8) 0 0;
+}
+
+.input__submit-button {
+  background-color: $input-submit__background-color;
+  color: $input-submit__color;
+  border: $input-submit__border;
+  font-size: $input-submit__font-size;
+  padding: $input-submit__padding;
+  border-radius: 0 5px 5px 0;
+}

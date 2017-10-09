@@ -1,0 +1,51 @@
+.navigation {
+  background-color: $main-nav__background-color;
+  border-bottom: 2px solid #012561;
+  margin-bottom: -1px;
+
+  @include clearfix;
+}
+
+.main-menu__wrapper {
+  @include breakpoint($tablet) {
+    position: relative;
+    @include container();
+    text-align: center;
+  }
+}
+
+
+ul.main-menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+
+    li {
+      display: inline-block;
+      padding: 0;
+      margin: 0;
+
+        a {
+          display: block;
+          color: $main-nav__color;
+          background: $main-nav__background-color;
+          font-size: .9em;
+          padding: $space / 2;
+            @include breakpoint($desktop) {
+              font-size: $main-nav__font-size;
+              padding: $main-nav__padding;
+            }
+
+
+            &:hover {
+              color: $main-nav__color_hover;
+              background: $main-nav__background-color_hover;
+            }
+        }
+    }
+    li.active a,
+    li:hover a {
+      color: $main-nav__color_hover;
+      background: $main-nav__background-color_hover;
+    }
+}

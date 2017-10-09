@@ -1,0 +1,84 @@
+// Main Page Title
+
+.page-title {
+  margin: 1em 0 0;
+  color: $theme__color;
+  font-size: $page-title__font-size-mobile;
+  @include breakpoint($tablet) {
+    font-size: $page-title__font-size-tablet;
+  }
+  @include breakpoint($tablet-landscape) {
+    font-size: $page-title__font-size;
+  }
+}
+
+
+
+h4 {
+  margin: 0 0 .5em;
+  font-size: $heading__h4-font-size;
+}
+
+
+header.header {
+  .header__strapline {
+    margin: 0;
+  }
+}
+
+h2.page__title {
+  line-height: $space;
+  margin: 0 0 .75em;
+}
+
+.font__large {
+  font-size: $font__size-large;
+}
+
+.text__align-left {
+  text-align: left;
+}
+
+.text__align-right {
+  text-align: right;
+}
+.form-row {
+  .text__align-right {
+    @include breakpoint($tablet) {
+      text-align: right;
+    }
+
+    @include breakpoint($tablet-landscape) {
+      margin-right: $space*1.5;
+    }
+  }
+}
+
+.text__align-center {
+  text-align: center;
+}
+
+.header__inner-right-col p {
+  font-weight: 400;
+  font-size: em(17);
+}
+
+h4.space {
+  margin: $space 0;
+}
+
+.error,
+.red {
+  color: red;
+}
+.blue {
+  color: $theme__color;
+}
+
+strong {
+  font-weight: 700;
+}
+
+a.themed-link {
+  color: $themed-link__color;
+}

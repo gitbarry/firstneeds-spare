@@ -1,0 +1,57 @@
+.page__top-bar_item a {
+  color: $page__top-bar_item__link_color;
+    &:hover,
+    &:active {
+      color: $page__top-bar_item__link_color_hover;
+    }
+}
+
+.side-block a {
+  color: $white;
+  display: inline-block;
+    &:hover {
+      color: $theme__color;
+      text-decoration: underline;
+    }
+}
+
+.content__left a {
+  color: $themed-link__color;
+    &:hover {
+      text-decoration: underline;
+    }
+}
+
+.content__left a.button {
+  color: $white;
+    &:hover {
+      text-decoration: none;
+    }
+}
+
+// Stick Main Nav to viewport
+.sticky {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  border-top: 0;
+}
+
+// Header User links
+.link__jobseekers-signin,
+.link__practice-signin {
+  font-size: em(14);
+}
+
+.link__jobseekers-signin {
+  margin-right: 1em;
+}
+
+
+// If link is void don't display a hand cursor
+.main-navigation__void:hover,
+.main-navigation__void:active {
+  cursor: pointer;
+}

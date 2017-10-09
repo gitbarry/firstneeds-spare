@@ -1,0 +1,4 @@
+register_globals = Off
+register_globals = 0
+extension=pdo.so
+extension=pdo_sqlite.so 

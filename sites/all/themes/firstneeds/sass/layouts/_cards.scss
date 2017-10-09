@@ -1,0 +1,11 @@
+.cards__wrapper {
+  .card {
+    @include container();
+    @include breakpoint($tablet) {
+      @include gallery(6);
+    }
+    @include breakpoint($desktop) {
+      @include gallery(3);
+    }
+  }
+}

@@ -1,0 +1,136 @@
+.content {
+  .content__inner {
+    padding: em(32) em(16) em(16);
+      @include breakpoint($desktop) {
+      }
+  }
+}
+
+.side-block {
+  @include side-block();
+}
+
+.block__margin {
+  margin: $block__margin;
+}
+
+.block__light {
+  border-radius: 10px;
+  border: 1px solid $border__color;
+  .block__light-inner {
+    padding: $space;
+  }
+}
+
+.block__side-search {
+  @include side-block();
+}
+
+/* Block Featured Job */
+.block__featured-job {
+  overflow: hidden;
+  @extend .side-block;
+  border-width: 3px;
+  background: $white;
+  .side-block__block-inner {
+    padding: 0 em(16) em(16);
+  }
+    h4 {
+      color: $theme__color;
+      font-size: em(24);
+      background: $gradient-top;
+      color: white;
+      padding: .6em;
+      margin: 0;
+    }
+    p {
+      color: $body__font-color;
+      @include breakpoint($tablet) {
+        font-size: em(14);
+      }
+      strong {
+        font-size: em(20);
+        color: $theme__color;
+      }
+    }
+
+
+  .text__align-right {
+    margin: em(8) em(8) 0 0;
+    padding: 0 0 em(12);
+    border-bottom: 1px dashed $light-grey;
+  }
+
+}
+
+
+// Block Control
+.block__control-wrapper {
+  margin-top: 2em;
+  padding-top: 2em;
+  border-top: 5px solid $border__color;
+  @include breakpoint($tablet) {
+    @include clearfix;
+    border-top: none;
+    margin-top: 3.75em;
+  }
+  @include breakpoint($tablet-landscape) {
+    margin-top: 2.25em;
+    padding-top: 0;
+  }margin-top: 6.25em;
+  @include breakpoint($desktop) {
+    margin-top: 6.25em;
+  }
+  .block__control {
+    margin: $block__margin;
+    padding: em(16);
+    @include clearfix;
+
+    border: 1px solid $border__color;
+    .block__control-left {
+      text-align: center;
+      padding-top: 1em;
+      @include span(3 of 12 first);
+      @include susy-breakpoint($desktop, $susy-no-padding) {
+        @include span(1 of 12 first);
+      }
+        a {
+          display: block;
+        }
+    }
+
+    .block__control-right {
+      @include span(9 of 12 last);
+      @include susy-breakpoint($desktop, $susy-no-padding) {
+        @include span(10 of 12 last);
+      }
+
+      h4 {
+        margin: .4em 0 0 0;
+      }
+
+      a {
+        display: block;
+      }
+    }
+  }
+
+}
+
+.control-horizontal {
+  clear: both;
+  margin: $space*2 0;
+  @include breakpoint($tablet) {
+    @incude clearfix;
+  }
+
+  .block__control {
+    box-sizing: border-box;
+    @include breakpoint($tablet) {
+      @include gallery(6);
+    }
+    @include breakpoint($tablet-landscape) {
+      @include gallery(4);
+    }
+  }
+}

@@ -1,0 +1,29 @@
+.page-header {
+
+  .page-header__inner {
+    @include clearfix;
+    padding: $space $space 0;
+    text-align: center;
+  }
+
+  .website-logo {
+    display: block;
+  }
+
+  .page-title {
+
+  }
+
+  .page-header__left {
+    @include breakpoint($tablet) {
+      @include span(6 first);
+    }
+  }
+
+  .page-header__right {
+    @include breakpoint($tablet) {
+      @include span(6 last);
+    }
+  }
+
+}

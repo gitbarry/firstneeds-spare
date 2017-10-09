@@ -1,0 +1,6 @@
+.clear {
+  clear: both;
+}
+.clear-fix {
+  @include clearfix;
+}

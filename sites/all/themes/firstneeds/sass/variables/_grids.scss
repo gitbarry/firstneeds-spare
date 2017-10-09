@@ -1,0 +1,46 @@
+// Breakpoints
+$base: 200px;
+$mobile: 325px;
+$mobile-landscape: 560px;
+$mobile-landscape-large: 625px;
+$tablet: 600px;
+$ipad: 768px;
+$tablet-large: 990px;
+$tablet-landscape: 1024px;
+$desktop: 1025px;
+$search-break: 1110px;
+$nav-break: 935px;
+
+$max-width: 1100px;
+$toggle-grid: "hide"; // "hide" || "show"
+
+// Susy
+$susy: (
+        global-box-sizing: border-box,
+        columns: 12,
+        gutters: 1/3,
+        container: $max-width
+
+);
+$susy-no-padding: (
+        global-box-sizing: border-box,
+        columns: 12,
+        gutters: 0,
+        container: $max-width
+
+);
+$susy-24: (
+        global-box-sizing: border-box,
+        columns: 24,
+        gutters: 1/3,
+        container: $max-width
+
+);
+
+$susy-24-no-padding: (
+        global-box-sizing: border-box,
+        columns: 24,
+        gutters: 0,
+        container: $max-width
+
+);

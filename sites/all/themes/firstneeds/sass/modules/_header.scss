@@ -1,0 +1,107 @@
+@include keyframes(logoIn) {
+  0% {
+    transform: scale(0.1);
+    opacity: 0.1;
+  }
+  90% {
+    //transform: scale(0.6);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@include keyframes(headerRight) {
+  0% {
+    position: relative;
+    top: -100px;
+    opacity: 0;
+  }
+  20% {
+    top: 20px;
+    opacity: 0.5;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+
+// Site Logo
+.website-logo-link {
+  @include animation(logoIn 0.8s);
+  @include breakpoint($ipad) {
+    float: left;
+  }
+}
+
+// Pager Heading
+.page-title {
+  @include breakpoint($ipad) {
+
+  }
+}
+
+.page-header {
+  margin-top: 1px;
+  margin-bottom: 0;
+  background: $header__background-color;
+
+  .page-header__inner {
+    margin:10px;
+    @include breakpoint($tablet) {
+      margin: $space/5 $space;
+    }
+    @include breakpoint($desktop) {
+
+      @include container();
+    }
+  }
+
+  .page-header__left {
+    overflow: hidden;
+  }
+
+  .header__inner-right {
+    display: none;
+    white-space: nowrap;
+    @include breakpoint($tablet) {
+      text-align: right;
+      display: block;
+      @include clearfix();
+      margin: 0 0 .25em;
+    }
+    .font__large.header__block__heading {
+      text-align: center;
+      font-size: rem(16);
+        @include breakpoint($tablet) {
+          text-align: right;
+          font-size: $font__size-large;
+        }
+    }
+
+    .header__inner-right--inner {
+      display: none;
+      @include breakpoint($tablet) {
+        display: block;
+        @include clearfix();
+        margin: 0 0 .5em;
+      }
+      i {
+        color: $dark-grey;
+      }
+      .header__inner-right-col.col-one {
+        text-align: right;
+        //@include span(6 of 12 first);
+      }
+      .header__inner-right-col.col-two {
+        @include span(2 of 12 first);
+      }
+      .header__inner-right-col.col-three {
+        @include span(10 of 12 last);
+      }
+    }
+  }
+}

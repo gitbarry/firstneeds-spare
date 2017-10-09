@@ -1,0 +1,30 @@
+@mixin side-block() {
+    @include linear-gradient(to top, $gradient-bottom, $gradient-top);
+    border-radius: 10px;
+    border: 1px solid $border__color;
+    margin: $side-block__margin;
+
+    .side-block__block-inner {
+      padding: $side-block__padding;
+      color: $side-block__font_color;
+    }
+
+    h4 {
+      color: $side-block__heading_color;
+      text-shadow: 1px 1px black;
+      font-size: em(28);
+    }
+}
+
+
+@mixin stripFloat() {
+  display: block;
+  width: 100%;
+  float: none;
+  margin: 0;
+  @include clearfix;
+}
+
+@mixin gradient() {
+  @include linear-gradient(to top, $gradient-bottom, $gradient-top);
+}
